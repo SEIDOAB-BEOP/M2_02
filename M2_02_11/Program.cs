@@ -28,6 +28,15 @@ namespace BOOP_02_11
             string s5 = s4.Substring(i);
             Console.WriteLine($"s3: {s3}, s4: {s4}, s5: {s5}"); // s3: The quick brown fox, s4: The quick brown cat, s5: brown cat
 
+
+            //Contains
+            string s6 = "fox";
+            Console.WriteLine(s3.Contains(s6));
+            if (s3.Contains("fox"))
+            {
+                Console.WriteLine($"Yes, {s3} constains the word {s6}");
+            }
+
             string[] words = s4.Split(' ');
             Console.WriteLine($"words[2]: {words[2]}"); // words[2]: brown
         }
