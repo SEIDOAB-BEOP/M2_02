@@ -13,7 +13,7 @@ namespace BOOP_02_03
         }
         static void Main(string[] args)
         {
-            MonthOfYear month = MonthOfYear.January;
+            MonthOfYear month = MonthOfYear.February;
             Console.WriteLine(month);       // January
             Console.WriteLine((int)month);  // 0
 
