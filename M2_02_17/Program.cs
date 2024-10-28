@@ -7,28 +7,18 @@ namespace BOOP_02_17
         public enum Favorites { Cars, Boats, Motorcycles, Other }
         static void Main(string[] args)
         {
-            Favorites yourFavorite = Favorites.Cars;
+            Favorites myFavorite = Favorites.Cars;
 
             // Yet the same using switch expressions
-            string myFavorite = yourFavorite switch
+            string ILike = myFavorite switch
             {
                 Favorites.Cars => $"I enjoy driving cars fast.",
-                Favorites.Boats => "I don't particular care for boats.",
                 Favorites.Motorcycles => "I love riding motorcycles!",
-                _ => "Well..."
+                Favorites.Boats => "I like fishing in a boat.",
+                _ => "Not sure what I like..."
             };
             
-            string maybeTogether = yourFavorite switch
-            {
-                Favorites.Cars => "Lets go together!",
-                Favorites.Motorcycles => "Lets go together!",
-                _ => "Pls go alone!"
-            };
-
-            Console.WriteLine(myFavorite);
-            Console.WriteLine(maybeTogether);
+            Console.WriteLine(ILike);
         }
     }
 }
-//Exercises
-//1.    Redo Exercise BOOP_02_16 but using Switch expressions instead
