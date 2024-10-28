@@ -31,39 +31,46 @@ namespace BOOP_02_16
         public enum Favorites { Cars, Boats, Motorcycles, Other }
         static void Main(string[] args)
         {
-            Favorites yourFavorite = Favorites.Cars;
+            Favorites myFavorite = Favorites.Cars;
 
             // using the switch statement
-            string myFavorite;
-            switch (yourFavorite)
+            string ILike;
+            switch (myFavorite)
             {
                 case Favorites.Cars:
-                    myFavorite = "I enjoy driving cars fast.";
+                    ILike = "I enjoy driving cars fast.";
                     break;
                 case Favorites.Motorcycles:
-                    myFavorite = "I love riding motorcycles!";
+                    ILike = "I love riding motorcycles!";
                     break;
                 case Favorites.Boats:
-                    myFavorite = "I don't particular care for boats.";
+                    ILike = "I like fishing in a boat.";
                     break;
                 default:
-                    myFavorite = "Well...";
+                    ILike = "Not sure what I like...";
                     break;
             }
 
+            Console.WriteLine(ILike);
+
+            Favorites yourFavorite = Favorites.Cars;
+            
             string maybeTogether;
             switch (yourFavorite)
             {
                 case Favorites.Cars:
                 case Favorites.Motorcycles:
-                    maybeTogether = "Lets go together!";
+
+                    if (myFavorite == Favorites.Cars || myFavorite == Favorites.Motorcycles)
+                        maybeTogether = "Lets go together!";
+                    else
+                        maybeTogether = "Pls go alone!";
                     break;
                 default:
                     maybeTogether = "Pls go alone!";
                     break;
             }
 
-            Console.WriteLine(myFavorite);
             Console.WriteLine(maybeTogether);
         }
     }
